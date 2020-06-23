@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GoogleDocsLite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+    <!-- CodeMirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+    <!-- Firepad -->
+    <link rel="stylesheet" href="https://firepad.io/releases/v1.5.9/firepad.css" />
+    <script src="https://firepad.io/releases/v1.5.9/firepad.min.js"></script>
+
+    <!-- Include example userlist script / CSS.
+         Can be downloaded from: https://github.com/firebase/firepad/tree/master/examples/ -->
+
+    <script src="~/js/firepad-userlist.js"></script>
+    <link rel="stylesheet" href="~/css/firepad-userlist.css" />
+
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+        }
+        /* Height / width / positioning can be customized for your use case.
+           For demo purposes, we make the user list 175px and firepad fill the rest of the page. */
+        #userlist {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            bottom: 0;
+            height: auto;
+            width: 175px;
+        }
+
+        #firepad {
+            position: absolute;
+            left: 175px;
+            top: 50px;
+            bottom: 0;
+            right: 0;
+            height: auto;
+        }
+
+        #uploadForm {
+            margin: 16px 2px;
+        }
+    </style>
+
+</head>
+<body onload="init()">
+    
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
