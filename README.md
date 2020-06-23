@@ -5,5 +5,5 @@ A Google Docs like web application that contains the following features:
 - Upload content of an existing Word Document into an editor.
 - Save text in the editor as MS Word, PDF, TXT and HTML document.
 
-Step by step details how to develop this application are given in the following blog post.
+The following blog post explains step by step how to develop this application.
 https://blog.conholdate.com/2020/06/22/build-your-own-google-docs-like-app/
